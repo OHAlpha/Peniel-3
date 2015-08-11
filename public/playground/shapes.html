@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<title>Shapes</title>
+	<link type="text/css" rel="stylesheet" href="shapes.css">
+	<script src="jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("#enter").click(function () {
+				$("#center_circle").animate({width: '500px', height: '500px'},1000, function () {
+					;
+				});
+				$("#spacer_right").animate({flexGrow: '4'},1000);
+			});
+		})
+	</script>
+	<body>
+		<nav id="top_menu">
+		</nav>
+		<div id="center_parent">
+			<div class="circle_spacer" id="spacer_left"></div>
+			<div id="center_circle">
+				<div>
+					<h1>Welcome</h1>
+					<p><a href="#" id="enter">Enter</a></p>
+					<nav id="circle_menu"></nav>
+				</div>
+			</div>
+			<div class="circle_spacer" id="spacer_right"></div>
+		</div>
+		<nav id="bottom_menu">
+		</nav>
+	</body>
+</html>
