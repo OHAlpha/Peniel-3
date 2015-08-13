@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<title>Scroll Event</title>
+	<script src="jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(window).scroll(function (data) {
+				$("#bin").append($(window).scrollTop() + "<br/>");
+			});
+		})
+	</script>
+	<body>
+		<div id="content"><img src="index_entry_background.jpg" height="200%"/></div><div id="bin"></div>
+	</body>
+</html>
