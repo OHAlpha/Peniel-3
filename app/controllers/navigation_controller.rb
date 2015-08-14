@@ -7,4 +7,7 @@ class NavigationController < ApplicationController
 
   def sitemap
   end
+
+  def popular
+  end
 end
