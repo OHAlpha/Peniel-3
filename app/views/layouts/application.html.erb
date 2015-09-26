@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Peniel3</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title><%= @title %></title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <style>
+    pre {
+      background-color: #edf;
+    }
+  </style>
+  <%= yield :style if content_for :style %>
+  <%= yield :script if content_for :script %>
 </head>
-<body>
+<body<% if content_for :bodyClass %> class="<%= yield :bodyClass %>"<% end %>>
+
+<% for ['navigation','account','about','learn','news','resources','reference'].each do |controller| %><%= render controller+'/menu' %><% end %>
 
 <%= yield %>
+
+<% if Rails.env.development? %>
+<%= debug(params) %>
+<pre>
+  <%= yield :debug if content_for :debug %>
+</pre>
+<% end %>
 
 </body>
 </html>
