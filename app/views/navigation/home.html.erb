@@ -1,1 +1,22 @@
-<%= render "home_"+params['style'] %>
+<% content_for :header do %>
+  <h1>Welcome To Peniel</h1>
+<% end %>
+
+<%= render partial: 'navigation/introduction', layout: 'layouts/portal', locals: {id_name: 'navigation', link_url: navigation_path} %>
+
+<%= render partial: 'account/introduction', layout: 'layouts/portal', locals: {id_name: 'account', link_url: account_path} %>
+
+<%= render partial: 'about/introduction', layout: 'layouts/portal', locals: {id_name: 'about', link_url: about_path} %>
+
+<%= render partial: 'learn/introduction', layout: 'layouts/portal', locals: {id_name: 'learn', link_url: learn_path} %>
+
+<%= render partial: 'news/introduction', layout: 'layouts/portal', locals: {id_name: 'news', link_url: news_path} %>
+
+<%= render partial: 'resources/introduction', layout: 'layouts/portal', locals: {id_name: 'resources', link_url: resources_path} %>
+
+<%= render partial: 'contribute/introduction', layout: 'layouts/portal', locals: {id_name: 'contribute', link_url: contribute_path} %>
+
+<%= render partial: 'reference/introduction', layout: 'layouts/portal', locals: {id_name: 'reference', link_url: reference_path} %>
+
+<% content_for :footer do %>
+<% end %>

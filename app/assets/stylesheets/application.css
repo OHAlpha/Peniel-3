@@ -13,11 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-body {
-	
-}
-
-body.bubble {
-	background-color: #ddf;
-}

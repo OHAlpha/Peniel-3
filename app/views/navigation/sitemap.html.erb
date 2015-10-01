@@ -1,4 +1,9 @@
-<h1>Peniel SDA Sitemap</h1>
+<% content_for :header do %>
+  <h1>Peniel SDA - Navigation</h1>
+<% end %>
+
+<%= render 'sitemap_intro' %>
+
 <p><%= link_to "Home", root_path %></p>
 <p class="ol_a1">Navigation</p>
 	<p class="ol_a2"><%= link_to "Search", nav_search_path %></p>
@@ -35,3 +40,6 @@
 	<p class="ol_a2"><%= link_to "Contact Us", reference_contact_us_path %></p>
 	<p class="ol_a2"><%= link_to "Departments", reference_departments_path %></p>
 	<p class="ol_a2"><%= link_to "Web Developer", reference_web_developer_path %></p>
+
+<% content_for :footer do %>
+<% end %>

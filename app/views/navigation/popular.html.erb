@@ -1,2 +1,10 @@
-<h1>Navigation#popular</h1>
-<p>Find me in app/views/navigation/popular.html.erb</p>
+<% content_for :header do %>
+  <h1>Peniel SDA - Navigation</h1>
+<% end %>
+
+<%= render 'popular_intro' %>
+
+<%= image_tag "construction.png", id: 'construction' %>
+
+<% content_for :footer do %>
+<% end %>

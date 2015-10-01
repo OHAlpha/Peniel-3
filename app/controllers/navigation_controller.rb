@@ -1,17 +1,16 @@
 class NavigationController < ApplicationController
   def home
-    renderAL
   end
 
   def search
-    renderAL
+    @title = @title + ' - Search'
   end
 
   def sitemap
-    renderAL
+    @title = @title + ' - Site Map'
   end
 
   def popular
-    renderAL
+    @title = @title + ' - Popular Pages'
   end
 end

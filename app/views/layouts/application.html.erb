@@ -5,26 +5,30 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <style>
-    pre {
-      background-color: #edf;
-    }
-  </style>
   <%= yield :style if content_for :style %>
   <%= yield :script if content_for :script %>
 </head>
-<body<% if content_for :bodyClass %> class="<%= yield :bodyClass %>"<% end %>>
+<body class="aperature">
+<div class="headmainfoot">
 
-<% for ['navigation','account','about','learn','news','resources','reference'].each do |controller| %><%= render controller+'/menu' %><% end %>
+<header class="headmainfoot">
+<%= yield :header if content_for :header %>
+</header>
 
+<main class="headmainfoot">
 <%= yield %>
+</main>
 
+<footer class="headmainfoot">
+<%= :footer if content_for :footer %>
 <% if Rails.env.development? %>
 <%= debug(params) %>
-<pre>
+<pre class="aperature debug">
   <%= yield :debug if content_for :debug %>
 </pre>
 <% end %>
+</footer>
 
+</div>
 </body>
 </html>

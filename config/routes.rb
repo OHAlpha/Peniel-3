@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   defstyle = 'default'
 
   root 'navigation#home', defaults: { layout: deflayout, style: defstyle }
+  get 'index', to: redirect('')
 
-  get 'navigation/index' => 'navigation#home', defaults: { layout: deflayout, style: defstyle }
+  get 'navigation/index', as: :navigation, defaults: { layout: deflayout, style: defstyle }
   get 'navigation/home', as: :nav_home, defaults: { layout: deflayout, style: defstyle }
   get 'navigation/search', as: :nav_search, defaults: { layout: deflayout, style: defstyle }
   get 'navigation/popular', as: :nav_popular, defaults: { layout: deflayout, style: defstyle }
