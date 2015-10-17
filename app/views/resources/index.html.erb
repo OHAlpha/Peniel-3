@@ -1,2 +1,16 @@
-<h1>Resources#index</h1>
-<p>Find me in app/views/resources/index.html.erb</p>
+<% content_for :header do %>
+  <h1>Peniel SDA - Resources</h1>
+<% end %>
+
+<%= render 'introduction' %>
+
+<%= render partial: 'media_intro', layout: 'layouts/portal', locals: {id_name: 'media', link_url: resources_media_path} %>
+
+<%= render partial: 'store_intro', layout: 'layouts/portal', locals: {id_name: 'store', link_url: resources_store_path} %>
+
+<%= render partial: 'games_intro', layout: 'layouts/portal', locals: {id_name: 'games', link_url: resources_games_path} %>
+
+<%= render partial: 'links_intro', layout: 'layouts/portal', locals: {id_name: 'links', link_url: resources_links_path} %>
+
+<% content_for :footer do %>
+<% end %>

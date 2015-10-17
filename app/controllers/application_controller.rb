@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   
   def set_title
     @title = "Peniel SDA"
+    @banner_text = 'Welcome To Peniel'
   end
   
   private

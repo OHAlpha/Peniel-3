@@ -1,0 +1,2 @@
+module Contact::UsCitiesHelper
+end

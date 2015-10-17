@@ -11,7 +11,69 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150814004801) do
+ActiveRecord::Schema.define(version: 20151016175340) do
+
+  create_table "contact_canada_addresses", force: :cascade do |t|
+    t.string   "apt"
+    t.string   "house"
+    t.string   "street"
+    t.integer  "canada_city_id"
+    t.string   "cityname"
+    t.integer  "canada_province_id"
+    t.string   "zipcode"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  create_table "contact_canada_cities", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "canada_state_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "contact_canada_provinces", force: :cascade do |t|
+    t.string   "name"
+    t.string   "code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contact_us_addresses", force: :cascade do |t|
+    t.string   "apt"
+    t.string   "house"
+    t.string   "street"
+    t.integer  "us_city_id"
+    t.string   "cityname"
+    t.integer  "us_state_id"
+    t.integer  "zipcode"
+    t.integer  "ext"
+    t.integer  "dp"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "contact_us_cities", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "us_state_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "contact_us_phone_numbers", force: :cascade do |t|
+    t.integer  "area_code"
+    t.integer  "central_office_code"
+    t.integer  "station_code"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "contact_us_states", force: :cascade do |t|
+    t.string   "name"
+    t.string   "code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "page_tags", force: :cascade do |t|
     t.string   "tag"

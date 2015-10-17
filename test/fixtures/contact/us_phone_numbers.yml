@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  area_code: 410
+  central_office_code: 111
+  station_code: 1111
+
+two:
+  area_code: 954
+  central_office_code: 111
+  station_code: 1111

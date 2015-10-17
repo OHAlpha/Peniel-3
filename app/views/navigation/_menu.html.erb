@@ -1,0 +1,6 @@
+<% aboutMenuClassRun = yield :aboutMenuClass if content_for :aboutMenuClass else "hor-menu" %>
+<ul>
+  <li class="<%= aboutMenuClassRun %>"><%= link_to "Search", nav_search_path %></li>
+  <li class="<%= aboutMenuClassRun %>"><%= link_to "Popular", nav_popular_path %></li>
+  <li class="<%= aboutMenuClassRun %>"><%= link_to "Sitemap", nav_map_path %></li>
+</ul>

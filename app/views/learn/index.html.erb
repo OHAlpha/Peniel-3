@@ -1,2 +1,14 @@
-<h1>Learn#index</h1>
-<p>Find me in app/views/learn/index.html.erb</p>
+<% content_for :header do %>
+  <h1>Peniel SDA - Learn</h1>
+<% end %>
+
+<%= render 'introduction' %>
+
+<%= render partial: 'bible_intro', layout: 'layouts/portal', locals: {id_name: 'bible', link_url: learn_bible_path} %>
+
+<%= render partial: 'health_intro', layout: 'layouts/portal', locals: {id_name: 'health', link_url: learn_health_path} %>
+
+<%= render partial: 'science_intro', layout: 'layouts/portal', locals: {id_name: 'science', link_url: learn_science_path} %>
+
+<% content_for :footer do %>
+<% end %>

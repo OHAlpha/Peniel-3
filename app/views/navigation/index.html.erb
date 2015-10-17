@@ -1,0 +1,16 @@
+<% content_for :header do %>
+  <h1>Peniel SDA - Navigation</h1>
+<% end %>
+
+<header>
+<%= render 'introduction' %>
+</header>
+
+<%= render partial: 'search_intro', layout: 'layouts/portal', locals: {id_name: 'search', link_url: nav_search_path} %>
+
+<%= render partial: 'popular_intro', layout: 'layouts/portal', locals: {id_name: 'popular', link_url: nav_popular_path} %>
+
+<%= render partial: 'sitemap_intro', layout: 'layouts/portal', locals: {id_name: 'sitemap', link_url: nav_map_path} %>
+
+<% content_for :footer do %>
+<% end %>

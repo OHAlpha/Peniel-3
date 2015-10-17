@@ -2,8 +2,11 @@
   <h1>Peniel SDA - Navigation</h1>
 <% end %>
 
+<header>
 <%= render 'sitemap_intro' %>
+</header>
 
+<main>
 <p><%= link_to "Home", root_path %></p>
 <p class="ol_a1">Navigation</p>
 	<p class="ol_a2"><%= link_to "Search", nav_search_path %></p>
@@ -40,6 +43,7 @@
 	<p class="ol_a2"><%= link_to "Contact Us", reference_contact_us_path %></p>
 	<p class="ol_a2"><%= link_to "Departments", reference_departments_path %></p>
 	<p class="ol_a2"><%= link_to "Web Developer", reference_web_developer_path %></p>
+</main>
 
 <% content_for :footer do %>
 <% end %>

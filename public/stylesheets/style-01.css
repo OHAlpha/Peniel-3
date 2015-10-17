@@ -1,0 +1,260 @@
+/* line 35, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+body {
+  background-color: #555;
+  background-image: url(/assets/backgrounds/black-tie_trans-back-32c0c08883e056c3892107fed53aa9dd57a9942f554ce76bff3d6286fb2c744b.png);
+  background-size: 20%;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+/* body */
+/* line 44, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+#win {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex-flow: column nowrap;
+  -moz-box-flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* outer header, main, footer */
+/* line 56, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+#o-head, #o-main, #o-foot {
+  flex-grow: 0;
+  flex-shrink: 1;
+  left: 1em;
+  right: 1em;
+}
+
+/* line 62, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+#o-head, #o-main, #o-foot {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex-flow: row nowrap;
+  -moz-box-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+/* outer header */
+/* line 69, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+#o-head {
+  height: 20em;
+}
+
+/* outer main */
+/* line 74, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+#o-main {
+  flex-grow: 1;
+}
+
+/* outer footer */
+/* line 79, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+#o-foot {
+  height: 10em;
+}
+
+/* inner header main footer */
+/* line 84, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+.top {
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 1200px;
+}
+
+/* inner header */
+/* line 90, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+header.top {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex-flow: column nowrap;
+  -moz-box-flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  background-color: #aaa;
+  background-image: url(/assets/backgrounds/penuel_000_banner_001-98641353ce77b7180c08620cb9eb14b5b076333176a60f9d7c39980fb09cf09f.png);
+  background-size: contain;
+}
+
+/* header main */
+/* line 99, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+#page-banner {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+/* header nav */
+/* line 104, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+nav.banner {
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 1.5em;
+  background-color: rgba(80, 80, 80, 0.5);
+}
+
+/* line 110, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+nav.banner {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex-flow: row nowrap;
+  -moz-box-flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+
+/* header nav menubutton */
+/* line 117, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+nav.banner .menubutton {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex-flow: column nowrap;
+  -moz-box-flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 6em;
+  margin-right: 10px;
+  background-color: rgba(64, 64, 64, 0.5);
+  color: white;
+  font-weight: bold;
+  text-size: 15px;
+}
+/* line 130, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+nav.banner .menubutton a:link, nav.banner .menubutton a:visited {
+  color: #ccc;
+  text-decoration: none;
+}
+/* line 131, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+nav.banner .menubutton a:active {
+  color: white;
+  text-decoration: none;
+}
+
+/* line 133, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+nav.banner .menubutton:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* line 135, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+nav.banner .menubutton:hover a:hover {
+  color: black;
+}
+
+/* inner main */
+/* line 138, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+main.top {
+  background-color: rgba(168, 168, 168, 0.7);
+}
+
+/* inner footer */
+/* line 143, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+footer.top {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex-flow: column nowrap;
+  -moz-box-flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  background-color: rgba(200, 200, 200, 0.7);
+}
+
+/* footer social */
+/* line 150, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+#foot-social {
+  flex-grow: 1;
+}
+
+/* footer reference */
+/* line 154, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+#foot-ref {
+  flex-grow: 1;
+}
+
+/* footer webmaster */
+/* line 158, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+#foot-wmaster {
+  flex-grow: 1;
+}
+
+/* line 161, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+h1 {
+  color: #ffffff;
+}
+
+/* line 164, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+h2, h3, h4, h5, h6 {
+  color: #555;
+}
+
+/* line 167, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+section.portal {
+  margin: .5em;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-style: solid;
+  border-color: #ddf;
+  border-width: 1px;
+}
+/* line 173, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+section.portal p {
+  color: #555;
+}
+/* line 176, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+section.portal h1, section.portal h2, section.portal h3, section.portal h4, section.portal h5, section.portal h6 {
+  color: #bbb;
+}
+/* line 179, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+section.portal footer {
+  background-color: #bbb;
+}
+
+/* line 183, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+.debug {
+  background-color: #eee;
+}
+
+/* line 186, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/style-01.scss.erb */
+#construction {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
