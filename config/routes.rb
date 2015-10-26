@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  namespace :contact do
+  get 'countries/index'
+  end
+
   deflayout = 'bubble'
   defstyle = 'default'
 
@@ -63,8 +67,12 @@ Rails.application.routes.draw do
   get 'reference/departments', as: :reference_departments, defaults: { layout: deflayout, style: defstyle }
   get 'reference/webdeveloper', as: :reference_web_developer, defaults: { layout: deflayout, style: defstyle }
 
-  get 'developer/us_states' => 'us_states#index'
-  get 'developer/us_cities' => 'us_cities#index'
-  get 'developer/us_addresses' => 'us_addresses#index'
+  get 'developer/countries' => 'contact/countries#index'
+  get 'developer/us_states' => 'contact/us_states#index'
+  get 'developer/us_cities' => 'contact/us_cities#index'
+  get 'developer/us_addresses' => 'contact/us_addresses#index'
+  get 'developer/canada_provinces' => 'contact/canada_provinces#index'
+  get 'developer/canada_cities' => 'contact/canada_cities#index'
+  get 'developer/canada_addresses' => 'contact/canada_addresses#index'
   
 end

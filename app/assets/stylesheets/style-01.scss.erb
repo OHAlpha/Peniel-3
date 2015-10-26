@@ -1,3 +1,5 @@
+<% mode = 0 %>
+
 $body-width: 1200px;
 
 $small-logo-size: 64px;
@@ -5,40 +7,48 @@ $small-logo-size: 64px;
 $social-icon-size: 64px;
 
 @mixin flexbox() {
+  /*
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
+  */
   display: flex;
 }
 
 @mixin flex($values) {
+  /*
   -webkit-box-flex: $values;
   -moz-box-flex: $values;
   -webkit-flex: $values;
   -ms-flex: $values;
+  */
   flex: $values;
 }
 
 @mixin flexflow($values) {
+  /*
   -webkit-box-flex-flow: $values;
   -moz-box-flex-flow: $values;
   -webkit-flex-flow: $values;
   -ms-flex-flow: $values;
+  */
   flex-flow: $values;
 }
 
 @mixin order($value) {
+  /*
   -webkit-box-ordinal-group: $value;
   -moz-box-ordinal-group: $value;
   -ms-flex-order: $value;
   -webkit-order: $value;
+  */
   order: $value;
 }
 
 body {
 	background-color: #555;
-	background-image: url(<%= asset_path 'backgrounds/black-tie_trans-back.png' %>);
+	background-image: url(<% if mode == 1 %><%= asset_path 'backgrounds/black-tie_trans-back.png' %><% else %>"/images/backgrounds/black-tie_trans-back.png"<% end %>);
 	background-size: 20%;
 	background-attachment: fixed;
 	color: #ffffff;
@@ -81,7 +91,7 @@ header.top {
 	align-items: stretch;
 	height: 20em;
 	background-color: #aaa;
-	background-image: url(<%= asset_path 'backgrounds/penuel_000_banner_001.png' %>);
+	background-image: url(<% if mode == 1 %><%= asset_path 'backgrounds/penuel_000_banner_001.png' %><% else %>"/images/backgrounds/penuel_000_banner_001.png"<% end %>);
 	background-size: contain;
 }
 /* header main */
@@ -242,11 +252,11 @@ section.portal {
 }
 #sda-logo {
 	margin-right: 3em;
-	background-image: url(<%= asset_path 'logos/sda/grey3d.png' %>);
+	background-image: url(<% if mode == 1 %><%= asset_path 'logos/sda/grey3d.png' %><% else %>"/images/logos/sda/grey3d.png"<% end %>);
 }
 #facebook-icon {
-	background-image: url(<%= asset_path 'icons/embossed_social/Facebook-Icon.png' %>);
+	background-image: url(<% if mode == 1 %><%= asset_path 'icons/embossed_social/Facebook-Icon.png' %><% else %>"/images/icons/embossed_social/Facebook-Icon.png"<% end %>);
 }
 #twitter-icon {
-	background-image: url(<%= asset_path 'icons/embossed_social/Twitter-Icon.png' %>);
+	background-image: url(<% if mode == 1 %><%= asset_path 'icons/embossed_social/Twitter-Icon.png' %><% else %>"/images/icons/embossed_social/Twitter-Icon.png"<% end %>);
 }

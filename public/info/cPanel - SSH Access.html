@@ -1,0 +1,471 @@
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <title>cPanel - SSH Access</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script type="text/javascript">
+          var w = window;
+          w._gaDataLayer = w._gaDataLayer || [];
+          w._gaDataLayer.push({ 'tcc.status': 'on' });
+          w._gaDataLayer.push({ 'tcc.baseHost': 'secureserver.net' });
+          w._gaDataLayer.push({ 'tcc.baseCookieHost': 'secureserver.net' });
+        </script>
+
+        <link rel="shortcut icon" href="/brand/favicon.ico?41809108" type="image/x-icon" />
+
+        <link rel="stylesheet" type="text/css" href="/cPanel_magic_revision_1407781947/frontend/gl_paper_lantern/css/yui-core.css" />
+        <link rel="stylesheet" type="text/css" href="/cPanel_magic_revision_1415834702/frontend/gl_paper_lantern/css/yui-custom.css" />
+        <!--link rel="stylesheet" type="text/css" href="/cPanel_magic_revision_1438707267/frontend/gl_paper_lantern/3rdparty/bootstrap/optimized/css/bootstrap.min.css" /-->
+        
+        <link rel="stylesheet" type="text/css" href="/cPanel_magic_revision_1386192030/frontend/gl_paper_lantern/3rdparty/ui-fonts/open_sans/optimized/open_sans.min.css" />
+        <link rel="stylesheet" type="text/css" href="/cPanel_magic_revision_1424892677/frontend/gl_paper_lantern/3rdparty/fontawesome/css/font-awesome.min.css" />
+
+        <!--link rel="stylesheet" type="text/css" href="/cPanel_magic_revision_1438758523/frontend/gl_paper_lantern/css/cpanel_base.min.css" /-->
+
+        
+<script>
+  var ux = ux || {};
+  ux.config = ux.config || {};
+  ux.config.plabel = '1';
+</script>
+<script src="//img1.wsimg.com/ux/1.3.24/js/uxcore.en.min.js"></script>
+<script>
+  var uxel = ux.eldorado || {};
+  uxel.fns = [];
+  uxel.ready = function ready(fn) { uxel.fns.push(fn); };
+  uxel.data = {
+    app: 'diablo',
+    market: 'en-us',
+    appAlias: 'diablo',
+    version: '1.5.25',
+    plId: '1',
+    context: {
+      isrslr: false,
+      isgd: true,
+      issppl: false,
+      isspgd: false
+    },
+    tokens: {
+      loginApp: '%7B%7Bpc%3Aloginapp%7D%7D',
+      loginPath: '%7B%7Bpc%3Acurrentpage%7D%7D'
+    },
+    shopperId: '{{pc:shopperid}}',
+    env: 'prodPhx',
+    manifest: 'appheader',
+    urlArgs: '?plid=GoDaddy',
+    formats: {
+      sfullname: '%7Bf%7D%20%7Bl%7D',
+      smenu: '%7Bf%7D'
+    },
+    thirdParty: {},
+    inappHelpSupported: false
+  };
+  uxel.texts = {
+    inappHelpTitle: 'Help'
+  };
+  uxel.urls = { };
+  ux.eldorado = uxel;
+</script>
+<script>
+  (function() {
+    function check(exp, cmp, version) {
+      if (!exp || !exp.exec) { return; }
+      var match = exp.exec(navigator.userAgent);
+      var found = false;
+  
+      if (match && match.length > 1) {
+        var major = parseInt(match[1], 10);
+        found = cmp.indexOf('=') > -1 && major === version ? true :
+          cmp.indexOf('<') === 0 && major < version ? true :
+          cmp.indexOf('>') === 0 && major > version ? true :
+          false;
+      }
+  
+      if (!found) { return; }
+  
+      window.location = '//img1.wsimg.com/ux/1.3.24/html/browser-upgrade.en.html' +
+        '?shopper=' + uxel.data.shopperId +
+        '&pl=' + uxel.data.plId;
+    }
+  
+    if (ux.config['disableBrowserDeprecation'] === true) { return; }
+  
+    var blocks = [{"ua":"ie","major":7,"compare":"<=","exp":{}}];
+  
+    if (blocks && blocks.length > 0) {
+      for (var cfg in blocks) {
+        check(cfg.exp, cfg.compare, cfg.major);
+      }
+    }
+  
+    ux.ready(function() {
+      $('<div id="uxh-browser-dep" />')
+        .prependTo(document.body)
+        .sfBrowser({"ignored":[{"ua":"mobile","exp":{}}],"block":[{"ua":"ie","major":7,"compare":"<=","exp":{}}],"warn":[{"ua":"ie","major":8,"compare":"<=","strict":true,"exp":{}}]});
+    });
+  
+  })();
+</script>
+<script>
+  uxel.data.thirdParty.tealium = { js: '//tags.tiqcdn.com/utag/godaddy/godaddy/prod/utag.js' };
+  
+</script>
+<script src="//img1.wsimg.com/ux/eldorado/1.5.25/js/appheader.min.js"></script>
+<script type="text/javascript">uxel.header.load('https://gui.godaddy.com', 'diablo', undefined, undefined, null);</script><!-- Google Analytics config -->
+<script>
+  uxel.ready(function() {
+    uxel.thirdParty.configGATagManager({
+      data: [
+        { 'shopperId': '105281861' },
+        { 'privateLabelId': '1' },
+        { 'server': 'a2plcpnl0343.prod.iad2.secureserver.net' }
+      ],
+      domain: 'secureserver.net'
+    });
+  });
+</script><!-- Google Tag Manager -->
+<noscript>
+  <iframe src="//www.googletagmanager.com/ns.html?id=GTM-SXRF" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+  uxel.ready(function() {
+    uxel.thirdParty.initGATagManager('GTM-SXRF');
+  });
+  
+  <!-- End Google Tag Manager -->
+</script>
+<script>ux.jQuery = $;</script>
+<script src="//img1.wsimg.com/ux/eldorado/1.5.25/js/appheader.min.js"></script><!-- Manifest appheader -->
+        
+<script src="//img1.wsimg.com/ux/1.3.24/js/uxcontrols.min.js"></script>
+
+        <script type="text/javascript" src="/cPanel_magic_revision_1374783460/frontend/gl_paper_lantern/3rdparty/jquery/1.10.2/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="/cPanel_magic_revision_1438707267/frontend/gl_paper_lantern/3rdparty/bootstrap/optimized/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/cPanel_magic_revision_1438645985/yui-gen/utilities_container/utilities_container.js"></script>
+        <script type="text/javascript" src="/cPanel_magic_revision_1425981741/frontend/gl_paper_lantern/js/x3_optimized.js"></script><script type="text/javascript" src="/cPanel_magic_revision_1438707267/unprotected/gl_paper_lantern/assets/js/gl_global.js"></script>
+<script type="text/javascript" src="/cPanel_magic_revision_1443727030/unprotected/gl_paper_lantern/assets/js/gl_common.js"></script>
+
+
+
+
+
+<script type='text/javascript'>
+  jQuery(document).ready(function() {
+    GL_Cpanel.gl_common.init();
+    GL_Cpanel.gl_common.cleanup();
+  });
+</script>
+
+
+        <script type="text/javascript" src="/cPanel_magic_revision_1438738349/cjt/cpanel-all-min.js"></script>
+        <script type="text/javascript">
+            CPANEL.validate.hide_validation_summary = true;
+        </script>
+        
+        <script type="text/javascript">
+            (function(){
+                window.PAGE = {};
+                window.NVData = {};
+                window.thisTheme = "gl_paper_lantern";
+
+            })();
+        </script>
+
+        <!-- custom style css file (styles.css) should go here -->
+        <link rel="stylesheet" type="text/css" href="/styled/current_style/sprites/icon_spritemap.css?41809108" />
+        <link rel="stylesheet" type="text/css" href="/styled/current_style/styles.css?41809108" />
+
+      
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="//img1.wsimg.com/ux/1.3.24/css/uxcore.min.css" rel="stylesheet"/><!-- HTML5 shim IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="//img1.wsimg.com/ux/1.3.24/js/html5shiv.min.js"></script>
+<![endif]-->
+<link href="//img1.wsimg.com/ux/eldorado/1.5.25/css/appheader.min.css" rel="stylesheet"/>
+<style>
+  .uxc-gd-logo {
+  background-image:url(//img1.wsimg.com/ux/eldorado/1.5.25/images/brand1.0/gd-header-logo.png);
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .uxc-gd-logo {
+  background-image:url(//img1.wsimg.com/ux/eldorado/1.5.25/images/brand1.0/gd-header-logo2.png);
+  }
+  }
+  .uxc-pt-icon {
+  background-image:url(//img1.wsimg.com/ux/eldorado/1.5.25/images/brand1.0/shopper-type-sprite.png);
+  }
+  .ux-footer-logo {
+  background-image: url(//img1.wsimg.com/ux/eldorado/1.5.25/images/brand1.0/gd-header-logo.png);
+  }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .ux-footer-logo{
+  background-image: url(//img1.wsimg.com/ux/eldorado/1.5.25/images/brand1.0/gd-header-logo2.png);
+  }
+  }
+</style>
+      
+<link href="//img1.wsimg.com/ux/1.3.24/css/uxcontrols.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="/cPanel_magic_revision_1438707267/unprotected/gl_paper_lantern/assets/css/gl-styles.css" />
+      <link rel="stylesheet" type="text/css" href="/cPanel_magic_revision_1438707267/unprotected/gl_paper_lantern/assets/css/gl-paper-lantern-styles.css" />
+
+    </head>
+    <body id="cpanel_body" class="yui-skin-sam">
+        <div id="wrap">
+
+            
+<header id="uxh">
+  <div id="uxh-acct-delegate" style="display:none;" class="delegate-shim">
+    <div style="display:none;" class="delegate delegate-rep">
+      <div class="container">
+        <div class="acct-delegate-text delegate-left">{0} logged in as: <span>{1} {2}</span></div>
+        <div class="delegate-right"><a id="exit-impersonation-link" href="https://sso.godaddy.com/logout?app=www&realm=idp" class="delegate-link"><span class="uxicon uxicon-x"></span><span class="text">Stop impersonation</span></a></div>
+      </div>
+    </div>
+    <div style="display:none;" class="delegate delegate-cust">
+      <div class="container">
+        <div class="acct-delegate-text delegate-left">{0} logged in as: <span>{1} {2}</span></div>
+        <div class="delegate-right"><a id="exit-delegation-link" href="javascript: void(0);" data-action="https://sso.godaddy.com/cookie/switchback/" data-sk="WSv4LgM7Bb9a692PjgPEBHG5MeDTHr" class="delegate-link"><span class="uxicon uxicon-x"></span><span class="text">Exit access</span></a></div>
+      </div>
+    </div>
+  </div>
+  <nav id="uxh-nav" class="navbar navbar-default uxc-header">
+    <div class="container">
+      <div id="uxh-nav-header" class="navbar-header">
+        <button id="uxh-mobile-nav" type="button" data-toggle="collapse" data-target=".uxc-header-nav" class="navbar-toggle"><span class="sr-only">Toggle Navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <div id="uxh-cart-link-mobile" class="hide-empty is-empty"><a href="https://cart.godaddy.com/basket.aspx" data-pc-qry="?plid=GoDaddy" data-tcode="AppHeader:Header:Cart:CartLink" data-content-is-empty="" data-content-not-empty="Checkout Now" class="menu-title font-primary-bold cart-link js-ci-exception"><span class="cart-label"><span class="is-empty"></span><span style="display:none;" class="not-empty"></span></span></a>
+        </div><a id="uxh-nav-brand" href="//www.godaddy.com/?plid=GoDaddy" class="navbar-brand font-primary-bold"><span id="uxhNavBrandLink" class="uxc-gd-logo">Go Daddy</span></a>
+        <div id="uxh-nav-product" class="font-primary-bold"></div>
+      </div>
+      <div id="uxh-nav-collapse" class="navbar-collapse collapse uxc-header-nav">
+        <ul id="uxh-nav-breadcrumbs" role="menubar" class="nav navbar-nav navbar-left">
+          <li id="uxh-nav-mya-link"><a role="menuitem" href="https://mya.godaddy.com/default.aspx?plid=GoDaddy">My Account</a></li>
+          <li id="uxh-s-productsmenu" class="dropdown"><a role="button" href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle font-primary-bold"><span id="uxh-product">cPanel Hosting</span>&nbsp;<b id="uxh-products-arrow" style="display:none;" class="caret uxh-ctrl-s-products"></b></a>
+            <ul id="uxh-s-products" role="menu" data-showops="true" class="sf-menu-icns dropdown-menu uxh-ctrl-s-products">
+              <li><a href="https://dcc.godaddy.com/default.aspx?plid=GoDaddy&regionsite=www&marketid=en-US" class="menuitem">Domains</a></li>
+              <li><a href="https://gateway.godaddy.com?plid=GoDaddy&regionsite=www&prog_id=GoDaddy&marketid=en-US" class="menuitem">Hosting</a></li>
+              <li><a href="https://productivity.godaddy.com/emailchooser?plid=GoDaddy&regionsite=www&utm_medium=uxh&utm_source=diablo&prog_id=GoDaddy&marketid=en-US" class="menuitem">Email</a></li>
+            </ul>
+          </li>
+          <li id="uxh-i-server" style="display:none;" class="font-primary-bold">11.50.0.30
+</li>
+        </ul>
+        <ul id="uxh-nav-right" role="menubar" class="nav navbar-nav navbar-right">
+          <li id="uxh-nav-support"><a id="uxhNavSupportLink" role="menuitem" href="http://support.godaddy.com/help/category/1022/web-hosting-cpanel" target="_blank">Help</a></li>
+          <li id="uxh-cart-link" class="hide-empty is-empty"><a href="https://cart.godaddy.com/basket.aspx" data-pc-qry="?plid=GoDaddy" data-tcode="AppHeader:Header:Cart:CartLink" data-content-is-empty="" data-content-not-empty="Checkout Now" class="menu-title font-primary-bold cart-link js-ci-exception"><span class="cart-label"><span class="is-empty"></span><span style="display:none;" class="not-empty"></span></span></a>
+          </li>
+          <li id="uxh-nav-user" class="dropdown"><a id="uxh-nav-user-link" role="button" href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle font-primary-bold"><span id="uxh-s-name-prefix" style="display:none;">Customer #</span><span id="uxh-s-name">Hello</span>&nbsp;<b class="caret"></b></a>
+            <ul id="uxh-nav-user-menu" role="menu" class="dropdown-menu shopper-menu">
+              <li id="uxh-s-header" class="uxh-logged-in shopper-header dropdown-header">
+                <div class="shopper-header-content">
+                  <div id="uxh-s-fullname" style="display:none;" class="uxc-nowrap"></div>
+                  <div id="uxh-s-status" style="display:none;" class="uxc-nowrap"></div>
+                  <div class="uxc-details">
+                    <div id="uxh-mi-custid" style="display:none;" class="uxc-nowrap"><span class="uxc-shopper-menu-label">Customer #:</span><span id="uxh-s-id"></span></div>
+                    <div id="uxh-mi-mgrid" style="display:none;" class="uxc-nowrap"><span class="uxc-shopper-menu-label">Manager ID:</span><span id="uxh-mgr-id"></span></div>
+                    <div id="uxh-mi-mgrname" style="display:none;" class="uxc-nowrap"><span class="uxc-shopper-menu-label">Manager Name:</span><span id="uxh-mgr-name"></span></div>
+                    <div id="uxh-vip-info" style="display:none;" class="uxc-nowrap"><span id="uxh-vip-label" class="uxc-shopper-menu-label">VIP Acct Exec:</span>
+                      <div id="uhx-vip-details">
+                        <div id="uxh-vip-repname"></div>
+                        <div id="uxh-vip-phone"></div>
+                        <div><a id="uxh-vip-email" href="javascript:void(0);"></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li role="presentation" class="divider uxh-no-delegate"></li>
+              <li id="uxh-nav-logged-in" class="uxh-logged-in uxh-no-delegate"><a role="menuitem" href="https://sso.godaddy.com/logout?realm=idp&app={{pc:loginapp}}&path={{pc:currentpage}}">Log Out</a></li>
+              <li id="uxh-nav-logged-out" class="uxh-logged-out"><a role="menuitem" href="https://sso.godaddy.com?realm=idp&app={{pc:loginapp}}&path={{pc:currentpage}}">Log In</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <nav id="uxh-nav-app" role="navigation" class="navbar uxc-nav">
+    <div class="container">
+      <div id="uxh-nav-app-active" data-toggle="collapse" data-target="#uxh-nav-app-collapse" data-default-caption="Menu" class="collapsed"><span id="uxh-nav-app-caption">Menu</span><b class="caret"></b></div>
+      <div id="uxh-nav-app-collapse" class="navbar-collapse collapse">
+        <ul id="uxh-nav-app-menu" class="nav navbar-nav">{{pc:applicationsamplemenu}}</ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+            <header id="original" style="display:none">
+              <div id="dropDownLinks" style="display:none">
+<div class="btn-group">
+    <button id="btnUserPref" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">
+        <span id="userImg" class="glyphicon glyphicon-user"></span>
+        <span id="lblUserNameTxt" class="hidden-inline-xs">one1wolf</span>
+        <span id="caretImg" class="caret"></span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-right">
+        
+        
+        <li>
+            <a id="lnkUserPrefChangeLang" href="../../setlang/index.html">Change Language            </a>
+        </li>
+        
+        
+        <li>
+            <a id="lnkUserPrefChangeStyle" href="../../styleswitcher/index.html">Change Style            </a>
+        </li>
+        
+        
+        <li>
+            <a id="lnkUserPrefUpdateContactInfo" href="../../contact/index.html">Contact Information            </a>
+        </li>
+        
+        <li>
+            <a id="lnkUserPrefResetInterface" href="javascript:void(0)" onclick="reset_all_interface_settings()">
+                Reset Page Settings
+            </a>
+        </li>
+    </ul>
+</div>
+
+                        <ul id="ulHelpItems">
+                          <li role="presentation">
+                            <a href="https://www.godaddy.com/help/linux-hosting-cpanel">Documentation</a>
+                          </li>
+                          <li role="presentation">
+                            <a href="../../tutorial.html">Video Tutorials</a>
+                          </li>
+                        </ul>
+
+                        <a id="lnkHeaderLogout" href="/logout/?locale=en">
+                          Logout
+                        </a>
+              </div>
+
+                <!-- UI INCLUDES GLOBAL HEADER -->
+                                    <div id="include-global-header">
+<nav id="quickLinks" class="navbar navbar-default navbar-subnav" role="navigation">
+    <div class="container">
+         <ul class="nav navbar-nav">
+            <li>
+                <a id="lnkQuickHome" href="../../index.html">Home                </a>
+            </li>
+            <li>
+                <a id="lnkQuickDomains" href="../../addon/index.html">Addon Domains                </a>
+            </li>
+            <li>
+                <a id="lnkQuickFilemgr" href="../../filemanager/index.html?showhidden=1&dir=/public_html"
+                   target="_blank" >File Manager                </a>
+            </li>
+            <li>
+                <a id="lnkQuickEmail" href="../../mail/pops.html">Email                </a>
+            </li>
+            <li>
+               <a id="lnkInstallatron" href="../../../../3rdparty/installatron/index.cgi#/apps">Applications               </a>
+            </li>
+
+            <li class="dropdown">
+               	<a id="lnkSettings" data-toggle="dropdown" class="dropdown-toggle" role="button" href="#">Settings                    <b class="caret icon-chevron-down"></b>
+                </a>
+                <ul id="ulSettings" class="dropdown-menu" role="menu" aria-labelledby="lnkSettings">
+                </ul>
+            </li>
+            <li class="dropdown">
+               	<a id="lnkHelp" data-toggle="dropdown" class="dropdown-toggle" role="button" href="#">Help                    <b class="caret icon-chevron-down"></b>
+                </a>
+                <ul id="ulHelp" class="dropdown-menu" role="menu" aria-labelledby="lnkHelp">
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+</div>
+                                <!-- UI INCLUDES GLOBAL HEADER END-->
+                
+            </header>
+            
+            <!-- PAGE TEMPLATE'S CONTENT START -->
+            <div id="content" class="container">
+                            <h1 class="page-header">
+                    <span id="icon-ssh_access" class="page-icon icon-ssh_access"></span>
+                    <span id="pageHeading" >SSH Access</span>
+                    
+                </h1>
+            
+            
+
+<div class="body-content">
+    
+        <div id="addKeyError" class="alert alert-danger">
+            <span id="addKeyErrorImg" class="glyphicon glyphicon-remove-sign"></span>
+            <div id="addKeyErrorMsg" class="alert-message">
+                Key Generation Failed.
+                Invalid Key Name
+            </div>
+        </div>
+    
+
+    
+<div class="return-link">
+    
+        <a id="lnkReturn" href="index.html">
+            <span class="glyphicon glyphicon-circle-arrow-left"></span>
+            Go Back
+        </a>
+    
+</div>
+
+</div>
+                        </div>
+            <!-- PAGE TEMPLATE'S CONTENT END -->
+        </div>
+
+
+
+
+        <footer id="copyright">
+            <!-- UI INCLUDES GLOBAL FOOTER -->
+                        <!-- UI INCLUDES GLOBAL FOOTER END -->
+
+            <div class="container">
+                <ol class="breadcrumb">
+                  <li>
+                    Copyright © 1999 - 2015 GoDaddy Operating Company, LLC. All Rights Reserved.                  </li>
+
+                  <li>
+                  
+                    <a id="lnkFooterDocs" href="http://go.cpanel.net/paperlanterndocs" target="_blank">
+                  Help                    </a>
+                  </li>
+
+                  <li>
+                    <a id="lnkFooterHelp" href="https://support.godaddy.com" target="_blank">Support                    </a>
+                  </li>
+                </ol>
+            </div>
+        </footer>
+        
+
+        <script type="text/javascript">
+            CPANEL.lang.close="Close";CPANEL.lang.Close="Close";CPANEL.lang.cancel="Cancel";CPANEL.lang.unlimited="Unlimited";CPANEL.lang.or="or";CPANEL.lang.ajax_loading="Loading …";CPANEL.lang.password_generator="Password Generator";CPANEL.lang.generate_password="Generate Password";CPANEL.lang.advanced="Advanced Options";CPANEL.lang.confirm_copy_password="I have copied this password in a safe place.";CPANEL.lang.use_password="Use Password";CPANEL.lang.length="Length";CPANEL.lang.alpha_characters="Alpha Characters";CPANEL.lang.nonalpha_characters="Non Alpha Characters";CPANEL.lang.both="Both";CPANEL.lang.lowercase="Lowercase";CPANEL.lang.uppercase="Uppercase";CPANEL.lang.numbers="Numbers";CPANEL.lang.symbols="Symbols";CPANEL.lang.password_strength="Password Strength";CPANEL.lang.passwords_match="Passwords Match";CPANEL.lang.password_validator_strength="Password strength must be at least:";CPANEL.lang.password_validator_no_spaces="Password cannot have spaces.";CPANEL.lang.password_validator_no_empty="Password cannot be empty.";CPANEL.lang.password_validator_no_match="Passwords do not match.";CPANEL.lang.Validation_Errors="Validation Errors";CPANEL.lang.strength_phrase_very_weak="Very Weak";CPANEL.lang.strength_phrase_weak="Weak";CPANEL.lang.strength_phrase_ok="OK";CPANEL.lang.strength_phrase_strong="Strong";CPANEL.lang.strength_phrase_very_strong="Very Strong";CPANEL.lang.click_to_close="Click to close.";CPANEL.lang.toggle_more="more »";CPANEL.lang.toggle_less="less »";CPANEL.lang.Error="Error";CPANEL.lang.json_error="Error";CPANEL.lang.json_parse_failed="JSON parse failed.";CPANEL.lang.ajax_error="AJAX Error";CPANEL.lang.ajax_try_again="Please refresh the page and try again.";CPANEL.lang.Search="Search";CPANEL.lang.Simple_Search="Simple Search";CPANEL.lang.Advanced_Search="Advanced Search";CPANEL.lang.add_search_field="add search field";CPANEL.lang.remove="remove";CPANEL.lang.No_Results_Found="No Results Found";CPANEL.lang.Go_to="Go to";CPANEL.lang.Show_rows="Show rows";CPANEL.lang.contains="contains";CPANEL.lang.equals="equals";CPANEL.lang.More="More";CPANEL.lang.ajax_error_with_image=CPANEL.icons.error+" "+this.ajax_error+": "+this.ajax_try_again;CPANEL.lang.json_error_with_image=CPANEL.icons.error+" "+this.json_error+": "+this.ajax_try_again;
+        </script>
+        
+        <script type="text/javascript">
+           // Warning Duplicate IDs
+           $('[id]').each(function(){
+              var ids = $('[id=\''+this.id+'\']');
+              if(ids.length>1 && ids[0]==this)
+                console.warn('Multiple IDs #'+this.id);
+            });
+        </script>
+
+    </body>
+</html>
+
+<!-- cPanel [11.50] (pro,attracta) Copyright (c) 2015 cPanel, Inc. Licensed on a2plcpnl0343.prod.iad2.secureserver.net -->

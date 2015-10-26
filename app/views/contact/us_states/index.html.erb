@@ -2,7 +2,7 @@
 <p>Find me in app/views/states/index.html.erb</p>
 
 <ul>
-<%= @states.each do |state| %>
+<% @states.each do |state| %>
 	<li>id: <%= state.id %>, name: <%= state.name %>, code: <%= state.code %></li>
 <% end %>
 </ul>

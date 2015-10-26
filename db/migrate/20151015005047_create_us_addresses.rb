@@ -4,16 +4,14 @@ class CreateUsAddresses < ActiveRecord::Migration
       t.string :apt
       t.string :house
       t.string :street
-      t.integer :us_city_id
+      t.belongs_to :us_city, index: true
       t.string :cityname
-      t.integer :us_state_id
+      t.belongs_to :us_state, index: true
       t.integer :zipcode
       t.integer :ext
       t.integer :dp
 
       t.timestamps null: false
     end
-    add_foreign_key :us_addresses, :us_cities
-    add_foreign_key :us_addresses, :us_states
   end
 end

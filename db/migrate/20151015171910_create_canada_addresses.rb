@@ -4,14 +4,12 @@ class CreateCanadaAddresses < ActiveRecord::Migration
       t.string :apt
       t.string :house
       t.string :street
-      t.integer :canada_city_id
+      t.belongs_to :canada_city, index: true
       t.string :cityname
-      t.integer :canada_province_id
+      t.belongs_to :canada_province, index: true
       t.string :zipcode
 
       t.timestamps null: false
     end
-    add_foreign_key :canada_addresses, :canada_cities
-    add_foreign_key :canada_addresses, :canada_provinces
   end
 end

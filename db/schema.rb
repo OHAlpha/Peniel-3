@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151016175340) do
+ActiveRecord::Schema.define(version: 20151024202114) do
 
   create_table "contact_canada_addresses", force: :cascade do |t|
     t.string   "apt"
@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(version: 20151016175340) do
     t.datetime "updated_at",         null: false
   end
 
+  add_index "contact_canada_addresses", ["canada_city_id"], name: "index_contact_canada_addresses_on_canada_city_id"
+  add_index "contact_canada_addresses", ["canada_province_id"], name: "index_contact_canada_addresses_on_canada_province_id"
+
   create_table "contact_canada_cities", force: :cascade do |t|
     t.string   "name"
     t.integer  "canada_state_id"
@@ -32,9 +35,20 @@ ActiveRecord::Schema.define(version: 20151016175340) do
     t.datetime "updated_at",      null: false
   end
 
+  add_index "contact_canada_cities", ["canada_state_id"], name: "index_contact_canada_cities_on_canada_state_id"
+
   create_table "contact_canada_provinces", force: :cascade do |t|
     t.string   "name"
     t.string   "code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contact_countries", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "alpha_2"
+    t.string   "alpha_3"
+    t.integer  "numeric"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -53,12 +67,17 @@ ActiveRecord::Schema.define(version: 20151016175340) do
     t.datetime "updated_at",  null: false
   end
 
+  add_index "contact_us_addresses", ["us_city_id"], name: "index_contact_us_addresses_on_us_city_id"
+  add_index "contact_us_addresses", ["us_state_id"], name: "index_contact_us_addresses_on_us_state_id"
+
   create_table "contact_us_cities", force: :cascade do |t|
     t.string   "name"
     t.integer  "us_state_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  add_index "contact_us_cities", ["us_state_id"], name: "index_contact_us_cities_on_us_state_id"
 
   create_table "contact_us_phone_numbers", force: :cascade do |t|
     t.integer  "area_code"

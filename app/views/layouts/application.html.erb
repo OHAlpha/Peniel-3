@@ -2,7 +2,7 @@
 <html>
 <head>
   <title><%= @title %></title>
-  <% mode=1 %>
+  <% mode = 0 %>
   <% if mode == 1 %>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -47,7 +47,7 @@ $(window).resize(function() {
 <%= render 'social/footer' %>
 </div>
 <%= :footer if content_for :footer %>
-<% if Rails.env.development? and mode == 0 %>
+<% if Rails.env.development? and mode == 1 %>
 <%= debug(params) %>
 <pre class="antique-dark debug">
   <%= yield :debug if content_for :debug %>
