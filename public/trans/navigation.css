@@ -1,0 +1,104 @@
+/* line 5, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+body {
+  counter-reset: ol_a1;
+}
+
+/* line 10, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a1 {
+  padding-left: 20px;
+}
+/* line 17, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a1:before {
+  counter-increment: ol_a1;
+  content: counter(ol_a1) ". ";
+}
+
+/* line 10, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a2 {
+  padding-left: 40px;
+}
+/* line 17, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a2:before {
+  counter-increment: ol_a2;
+  content: counter(ol_a2) ". ";
+}
+
+/* line 10, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a3 {
+  padding-left: 60px;
+}
+/* line 17, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a3:before {
+  counter-increment: ol_a3;
+  content: counter(ol_a3) ". ";
+}
+
+/* line 10, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a4 {
+  padding-left: 80px;
+}
+/* line 17, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a4:before {
+  counter-increment: ol_a4;
+  content: counter(ol_a4) ". ";
+}
+
+/* line 10, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a5 {
+  padding-left: 100px;
+}
+/* line 17, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a5:before {
+  counter-increment: ol_a5;
+  content: counter(ol_a5) ". ";
+}
+
+/* line 10, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a6 {
+  padding-left: 120px;
+}
+/* line 17, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a6:before {
+  counter-increment: ol_a6;
+  content: counter(ol_a6) ". ";
+}
+
+/* line 10, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a7 {
+  padding-left: 140px;
+}
+/* line 17, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a7:before {
+  counter-increment: ol_a7;
+  content: counter(ol_a7) ". ";
+}
+
+/* line 10, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a8 {
+  padding-left: 160px;
+}
+/* line 17, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a8:before {
+  counter-increment: ol_a8;
+  content: counter(ol_a8) ". ";
+}
+
+/* line 10, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a9 {
+  padding-left: 180px;
+}
+/* line 17, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a9:before {
+  counter-increment: ol_a9;
+  content: counter(ol_a9) ". ";
+}
+
+/* line 10, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a10 {
+  padding-left: 200px;
+}
+/* line 17, C:/Users/Lloyd/Workspace/1oneWolf/Peniel SDA/Peniel3/app/assets/stylesheets/navigation.scss */
+.ol_a10:before {
+  counter-increment: ol_a10;
+  content: counter(ol_a10) ". ";
+}

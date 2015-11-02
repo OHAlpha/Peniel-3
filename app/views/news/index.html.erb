@@ -1,0 +1,16 @@
+<% content_for :header do %>
+  <h1>Peniel SDA - News</h1>
+<% end %>
+
+<%= render 'introduction' %>
+
+<%= render partial: 'world_intro', layout: 'layouts/portal', locals: {id_name: 'world', link_url: news_world_path} %>
+
+<%= render partial: 'church_intro', layout: 'layouts/portal', locals: {id_name: 'church', link_url: news_church_path} %>
+
+<%= render partial: 'peniel_intro', layout: 'layouts/portal', locals: {id_name: 'peniel', link_url: news_peniel_path} %>
+
+<%= render partial: 'events_intro', layout: 'layouts/portal', locals: {id_name: 'events', link_url: news_events_path} %>
+
+<% content_for :footer do %>
+<% end %>

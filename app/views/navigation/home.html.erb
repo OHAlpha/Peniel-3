@@ -1,0 +1,29 @@
+<% content_for :header do %>
+  <h1>Welcome To Peniel</h1>
+<% end %>
+
+<header>
+<h2>Welcome To Peniel SDA</h2>
+<p>We welcome you to the Peniel SDA Website. Here, you can connect with 
+members, browse bible lessons and news articles, find out what's happening 
+at Peniel or even play games.</p>
+</header>
+
+<%= render partial: 'about/introduction', layout: 'layouts/portal', locals: {id_name: 'about', link_url: about_path} %>
+
+<%= render partial: 'learn/introduction', layout: 'layouts/portal', locals: {id_name: 'learn', link_url: learn_path} %>
+
+<%= render partial: 'news/introduction', layout: 'layouts/portal', locals: {id_name: 'news', link_url: news_path} %>
+
+<%= render partial: 'resources/introduction', layout: 'layouts/portal', locals: {id_name: 'resources', link_url: resources_path} %>
+
+<%= render partial: 'contribute/introduction', layout: 'layouts/portal', locals: {id_name: 'contribute', link_url: contribute_path} %>
+
+<%= render partial: 'account/introduction', layout: 'layouts/portal', locals: {id_name: 'account', link_url: account_path} %>
+
+<%= render partial: 'navigation/introduction', layout: 'layouts/portal', locals: {id_name: 'navigation', link_url: navigation_path} %>
+
+<%= render partial: 'reference/introduction', layout: 'layouts/portal', locals: {id_name: 'reference', link_url: reference_path} %>
+
+<% content_for :footer do %>
+<% end %>

@@ -1,0 +1,169 @@
+header, footer, section {
+	margin: 1em;
+	padding: .5em;
+}
+
+div.headmainfoot {
+	//display: none;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+header.headmainfoot {
+	order: -999999999;
+	flex-grow: 0;
+	flex-shrink: 1;
+	height: 10em;
+	border-style: solid;
+	border-color: #444;
+	border-width: 1px;
+}
+
+main.headmainfoot {
+	flex-grow: 1;
+	flex-shrink: 3;
+	margin: 1em;
+	margin-top: 0;
+	margin-bottom: 0;
+	border-style: solid;
+	border-color: #444;
+	border-width: 1px;
+}
+
+footer.headmainfoot {
+	order: 999999999;
+	flex-grow: 0;
+	flex-shrink: 1;
+	//height: 5em;
+	border-style: solid;
+	border-color: #444;
+	border-width: 1px;
+}
+
+body {
+	.bubble {
+		background-color: #ddf;
+	}
+}
+
+body.antique-dark {
+	background-color: #555;
+	background-image: url('/images/backgrounds/black-tie_trans-back.png');
+	background-size: 20%;
+	color: #ffffff;
+	header#banner {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: stretch;
+		padding: 0;
+		background-color: #aaa;
+		background-image: url('/images/backgrounds/penuel_000_banner_001.png');
+		background-size: contain;
+		main {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: space-around;
+			flex-grow: 1;
+			flex-shrink: 1;
+			padding-left: 4em;
+			background-color: transparent;
+		}
+		nav.hmenu {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: flex-end;
+			align-items: stretch;
+			order: 999999999;
+			flex-grow: 0;
+			flex-shrink: 0;
+			height: 1.5em;
+			margin: 0;
+			background-color: rgba(80,80,80,.5);
+			div.hmenubutton {
+				display: flex;
+				flex-direction: column;
+				flex-wrap: nowrap;
+				justify-content: space-around;
+				align-items: center;
+				flex-grow: 0;
+				flex-shrink: 1;
+				width: 6em;
+				margin: 0;
+				margin-right: 10px;
+				padding: 0;
+				background-color: rgba(64,64,64,.5);
+				color: white;
+				font-weight: bold;
+				text-size: 15px;
+				a:link, a:visited { color: #ccc; text-decoration: none; }
+				a:active { color: white; text-decoration: none; }
+			}
+			div.hmenubutton:hover {
+				background-color: rgba(255,255,255,.5);
+				a:hover { color: black; }
+			}
+		}
+	}
+	main {
+		background-color: rgba(184,184,184,.7);
+		header, main {
+			margin: 0;
+			background-color: transparent;
+		}
+		main {
+			padding: .5em;
+		}
+	}
+	footer {
+		background-color: rgba(216,216,216,.7);
+	}
+	footer pre {
+		background-color: #eee;
+	}
+	h1 {
+		color: #ffffff;
+	}
+	h2, h3, h4, h5, h6 {
+		color: #555;
+	}
+	section.portal {
+		margin: .5em;
+		background-color: rgba(255,255,255,.6);
+		border-style: solid;
+		border-color: #ddf;
+		border-width: 1px;
+		p {
+			color: #555;
+		}
+		h1, h2, h3, h4, h5, h6 {
+			color: #bbb;
+		}
+		footer {
+			background-color: #bbb;
+		}
+	}
+	.debug {
+		background-color: #eee;
+	}
+}
+
+#construction {
+	width: 200px;
+	height: 200px;
+	text-align: center;
+}
+
+li.hor-menu {
+	display: inline;
+}

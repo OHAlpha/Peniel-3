@@ -1,14 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Peniel3</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title><%= @title %></title>
+  <% mode = 0 %>
+  <% if mode == 1 %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <% else %>
+  <link rel="stylesheet" media="all" href="/stylesheets/navigation.css" />
+  <link rel="stylesheet" media="all" href="/stylesheets/style-01.css" />
+  <script src="/javascripts/jquery.js"></script>
+  <script src="/javascripts/jquery_ujs.js"></script>
+  <script src="/javascripts/turbolinks.js"></script>
+  <% end %>
 </head>
-<body>
+<body class="antique-dark">
+<div id="win">
+<div id="column">
 
+<header class="top">
+<div id="page-banner">
+<h1><%= @banner_text %></h1>
+<iframe src="http://www.kingjamesbibleonline.org/popular-bible-verses-widget.php"></iframe>
+</div>
+<%= render 'navigation/top_menu' %>
+<script>
+$(document).ready(function() {
+	$("#o-head").css('height',$("header.top").width()*3.0/16+'px');
+	$("header.top").css('height',$("header.top").width()*3.0/16+'px');
+});
+$(window).resize(function() {
+	$("#o-head").css('height',$("header.top").width()*3.0/16+'px');
+	$("header.top").css('height',$("header.top").width()*3.0/16+'px');
+});
+</script>
+</header>
+
+<main class="top">
 <%= yield %>
+</main>
 
+<footer class="top">
+<div id="foot-col">
+<div id="foot-social">
+<%= render 'social/footer' %>
+</div>
+<%= :footer if content_for :footer %>
+<% if Rails.env.development? and mode == 1 %>
+<%= debug(params) %>
+<pre class="antique-dark debug">
+  <%= yield :debug if content_for :debug %>
+</pre>
+<% end %>
+<div id="foot-ref">
+<%= render 'reference/footer' %>
+</div>
+<div id="foot-wmaster">
+</div>
+</div>
+<div id="foot-insp">
+<iframe src="http://www.kingjamesonline.org/inspiring-images-widget.php" style="width: 344px; height: 344px; border: 0px solid #ffffff;"></iframe>
+</div>
+</footer>
+
+</div>
 </body>
 </html>

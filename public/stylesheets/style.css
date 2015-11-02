@@ -1,0 +1,204 @@
+/* line 1, style.scss */
+header, footer, section {
+  margin: 1em;
+  padding: .5em;
+}
+
+/* line 6, style.scss */
+div.headmainfoot {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* line 19, style.scss */
+header.headmainfoot {
+  order: -999999999;
+  flex-grow: 0;
+  flex-shrink: 1;
+  height: 10em;
+  border-style: solid;
+  border-color: #444;
+  border-width: 1px;
+}
+
+/* line 29, style.scss */
+main.headmainfoot {
+  flex-grow: 1;
+  flex-shrink: 3;
+  margin: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-style: solid;
+  border-color: #444;
+  border-width: 1px;
+}
+
+/* line 40, style.scss */
+footer.headmainfoot {
+  order: 999999999;
+  flex-grow: 0;
+  flex-shrink: 1;
+  border-style: solid;
+  border-color: #444;
+  border-width: 1px;
+}
+
+/* line 51, style.scss */
+body .bubble {
+  background-color: #ddf;
+}
+
+/* line 56, style.scss */
+body.antique-dark {
+  background-color: #555;
+  background-image: url("/images/backgrounds/black-tie_trans-back.png");
+  background-size: 20%;
+  color: #ffffff;
+}
+/* line 61, style.scss */
+body.antique-dark header#banner {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0;
+  background-color: #aaa;
+  background-image: url("/images/backgrounds/penuel_000_banner_001.png");
+  background-size: contain;
+}
+/* line 71, style.scss */
+body.antique-dark header#banner main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding-left: 4em;
+  background-color: transparent;
+}
+/* line 81, style.scss */
+body.antique-dark header#banner nav.hmenu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: stretch;
+  order: 999999999;
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 1.5em;
+  margin: 0;
+  background-color: rgba(80, 80, 80, 0.5);
+}
+/* line 93, style.scss */
+body.antique-dark header#banner nav.hmenu div.hmenubutton {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 6em;
+  margin: 0;
+  margin-right: 10px;
+  padding: 0;
+  background-color: rgba(64, 64, 64, 0.5);
+  color: white;
+  font-weight: bold;
+  text-size: 15px;
+}
+/* line 109, style.scss */
+body.antique-dark header#banner nav.hmenu div.hmenubutton a:link, body.antique-dark header#banner nav.hmenu div.hmenubutton a:visited {
+  color: #ccc;
+  text-decoration: none;
+}
+/* line 110, style.scss */
+body.antique-dark header#banner nav.hmenu div.hmenubutton a:active {
+  color: white;
+  text-decoration: none;
+}
+/* line 112, style.scss */
+body.antique-dark header#banner nav.hmenu div.hmenubutton:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* line 114, style.scss */
+body.antique-dark header#banner nav.hmenu div.hmenubutton:hover a:hover {
+  color: black;
+}
+/* line 118, style.scss */
+body.antique-dark main {
+  background-color: rgba(184, 184, 184, 0.7);
+}
+/* line 120, style.scss */
+body.antique-dark main header, body.antique-dark main main {
+  margin: 0;
+  background-color: transparent;
+}
+/* line 124, style.scss */
+body.antique-dark main main {
+  padding: .5em;
+}
+/* line 128, style.scss */
+body.antique-dark footer {
+  background-color: rgba(216, 216, 216, 0.7);
+}
+/* line 131, style.scss */
+body.antique-dark footer pre {
+  background-color: #eee;
+}
+/* line 134, style.scss */
+body.antique-dark h1 {
+  color: #ffffff;
+}
+/* line 137, style.scss */
+body.antique-dark h2, body.antique-dark h3, body.antique-dark h4, body.antique-dark h5, body.antique-dark h6 {
+  color: #555;
+}
+/* line 140, style.scss */
+body.antique-dark section.portal {
+  margin: .5em;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-style: solid;
+  border-color: #ddf;
+  border-width: 1px;
+}
+/* line 146, style.scss */
+body.antique-dark section.portal p {
+  color: #555;
+}
+/* line 149, style.scss */
+body.antique-dark section.portal h1, body.antique-dark section.portal h2, body.antique-dark section.portal h3, body.antique-dark section.portal h4, body.antique-dark section.portal h5, body.antique-dark section.portal h6 {
+  color: #bbb;
+}
+/* line 152, style.scss */
+body.antique-dark section.portal footer {
+  background-color: #bbb;
+}
+/* line 156, style.scss */
+body.antique-dark .debug {
+  background-color: #eee;
+}
+
+/* line 161, style.scss */
+#construction {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
+
+/* line 167, style.scss */
+li.hor-menu {
+  display: inline;
+}
+
+/*# sourceMappingURL=style.css.map */

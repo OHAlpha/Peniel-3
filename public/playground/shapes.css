@@ -1,0 +1,42 @@
+#center_parent {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: no-wrap;
+	justify-content: space-around;
+	align-items: center;
+	background-color: black;
+	shape-inside: circle(150px at 50% 50%);
+}
+.circle_spacer {
+	height: 300px;
+	flex-grow: 1;
+}
+#center_circle {
+	width: 300px;
+	height: 300px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: no-wrap;
+	justify-content: space-around;
+	align-items: center;
+	flex-grow: 0;
+	background-color: white;
+	-webkit-clip-path: circle(50% at 50% 50%);
+	clip-path: circle(50% at 50% 50%);
+	shape-inside: circle(50% at 50% 50%);
+}
+#center_circle * {
+	text-align: center;
+	vertical-align: middle;
+}
+#top_menu {
+	
+}
+#bottom_menu {
+	
+}

@@ -1,0 +1,12 @@
+<% content_for :header do %>
+  <h1>Peniel SDA - Give Back</h1>
+<% end %>
+
+<%= render 'introduction' %>
+
+<%= render partial: 'give_intro', layout: 'layouts/portal', locals: {id_name: 'give', link_url: contribute_give_path} %>
+
+<%= render partial: 'join_intro', layout: 'layouts/portal', locals: {id_name: 'join', link_url: contribute_join_path} %>
+
+<% content_for :footer do %>
+<% end %>

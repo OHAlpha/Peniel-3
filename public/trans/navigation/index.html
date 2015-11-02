@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Peniel SDA - Navigation</title>
+  <link rel="stylesheet" media="all" href="/stylesheets/navigation.css" />
+  <link rel="stylesheet" media="all" href="/stylesheets/style-01.css" />
+  <script src="/javascripts/jquery.js"></script>
+  <script src="/javascripts/jquery_ujs.js"></script>
+  <script src="/javascripts/turbolinks.js"></script>
+</head>
+<body class="antique-dark">
+<div id="win">
+<div id="column">
+
+<header class="top">
+<div id="page-banner">
+<h1>Peniel SDA - Navigation</h1>
+<iframe src="http://www.kingjamesbibleonline.org/popular-bible-verses-widget.php"></iframe>
+</div>
+<nav class="banner">
+  <div class="menubutton" panel="none" id="home-button"><a href="/">Home</a></div>
+  <div class="menubutton" panel="about" id="about-button"><a href="/about">About Us</a></div>
+  <div class="menubutton" panel="learn" id="about-button"><a href="/learn">Study</a></div>
+  <div class="menubutton" panel="news" id="about-button"><a href="/news">News</a></div>
+  <div class="menubutton" panel="resources" id="about-button"><a href="/resources">Resources</a></div>
+  <div class="menubutton" panel="give" id="about-button"><a href="/contribute">Give Back</a></div>
+  <div class="menubutton" panel="account" id="about-button"><a href="/account">Account</a></div>
+  <div class="menubutton" panel="navigation" id="about-button"><a href="/navigation">The Site</a></div>
+  <form><input type="text"/><input type="submit" value="Search"></form>
+</nav>
+<script>
+$(document).ready(function() {
+	$("#o-head").css('height',$("header.top").width()*3.0/16+'px');
+	$("header.top").css('height',$("header.top").width()*3.0/16+'px');
+});
+$(window).resize(function() {
+	$("#o-head").css('height',$("header.top").width()*3.0/16+'px');
+	$("header.top").css('height',$("header.top").width()*3.0/16+'px');
+});
+</script>
+</header>
+
+<main class="top">
+
+<header>
+<h2>The Site</h2>
+<p>Need help finding where you're going? Let us help you out.</p>
+</header>
+
+<section class="portal" id="search-portal">
+  <h2>Search</h2>
+<p>Can't remember where to find your favorite page? Search for it. We'll help you find it.</p>
+  <footer><a href="/navigation/search">More...</a></footer>
+</section>
+
+<section class="portal" id="popular-portal">
+  <h2>Popular Pages</h2>
+<p>See what everybody's been visiting. You might like it too.</p>
+  <footer><a href="/navigation/popular">More...</a></footer>
+</section>
+
+<section class="portal" id="sitemap-portal">
+  <h2>Site Map</h2>
+<p>If all else fails, we've got all the pages listed right here.</p>
+  <footer><a href="/navigation/sitemap">More...</a></footer>
+</section>
+
+
+</main>
+
+<footer class="top">
+<div id="foot-col">
+<div id="foot-social">
+<div class="small-logo" id="sda-logo"></div>
+<div class="social-icon" id="facebook-icon"></div>
+<div class="social-icon" id="twitter-icon"></div>
+</div>
+
+<div id="foot-ref">
+
+</div>
+<div id="foot-wmaster">
+</div>
+</div>
+<div id="foot-insp">
+<iframe src="http://www.kingjamesonline.org/inspiring-images-widget.php" style="width: 344px; height: 344px; border: 0px solid #ffffff;"></iframe>
+</div>
+</footer>
+
+</div>
+</body>
+</html>

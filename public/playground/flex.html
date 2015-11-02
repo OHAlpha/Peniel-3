@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Flex</title>
+<style>
+.body {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: black;
+	color: white;
+}
+div {
+	border-style: solid;
+	border-color: white;
+	border-width: 2px;
+	background-color: #444;
+}
+div.head {
+	order: -999999999;
+	flex-grow: 0;
+	flex-shrink: 1;
+	border-style: solid;
+	border-color: white;
+	border-width: 2px;
+	background-color: #444;
+}
+div.main {
+	flex-grow: 1;
+	flex-shrink: 3;
+	border-style: solid;
+	border-color: white;
+	border-width: 2px;
+	background-color: #444;
+}
+div.foot {
+	order: 999999999;
+	flex-grow: 0;
+	flex-shrink: 1;
+	border-style: solid;
+	border-color: white;
+	border-width: 2px;
+	background-color: #444;
+}
+</style>
+</head>
+<body>
+<div class="body">
+	<div class="head">Header</div>
+	<div class="main">Main</div>
+	<div class="foot">Footer</div>
+</div>
+</body>
+</html>

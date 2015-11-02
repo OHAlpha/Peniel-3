@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Flexbox Layout</title>
+<style>
+div, header, main, footer, nav {
+	border-style: solid;
+	border-width: 5px;
+}
+/* body */
+#win {
+	display: -webkit-box;
+	/*
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	*/
+	display: flex;
+	
+	/*
+	-webkit-box-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+	*/
+
+	-webkit-box-flex-direction: column;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	
+	-webkit-box-flex-wrap: nowrap;
+	-webkit-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	
+	-webkit-align-items: stretch;
+	align-items: stretch;
+	
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	border-color: #000000;
+}
+/* outer header, main, footer */
+#o-head, #o-main, #o-foot {
+	flex-grow: 0;
+	flex-shrink: 1;
+	left: 1em;
+	right: 1em;
+}
+#o-head, #o-main, #o-foot {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: stretch;
+}
+/* outer header */
+#o-head {
+	height: 20em;
+	border-color: #ff0000;
+}
+/* outer main */
+#o-main {
+	flex-grow: 1;
+	border-color: #00ff00;
+}
+/* outer footer */
+#o-foot {
+	height: 10em;
+	border-color: #0000ff;
+}
+/* inner header main footer */
+.top {
+	flex-grow: 0;
+	flex-shrink: 1;
+	width: 1000px;
+	border-color: #885544;
+}
+/* inner header */
+header.top {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: stretch;
+}
+/* header main */
+#page-banner {
+	flex-grow: 1;
+	flex-shrink: 1;
+	border-color: #ffff00;
+}
+/* header nav */
+nav.banner {
+	flex-grow: 0;
+	flex-shrink: 0;
+	height: 1.5em;
+	border-color: #ff00ff;
+}
+nav.banner {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: stretch;
+}
+/* header nav menubutton */
+nav.banner .menubutton {
+	flex-grow: 0;
+	flex-shrink: 1;
+	width: 4em;
+}
+/* inner footer */
+footer.top {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: stretch;
+}
+/* footer social */
+#foot-social {
+	flex-grow: 1;
+	border-color: #00ff88;
+}
+/* footer reference */
+#foot-ref {
+	flex-grow: 1;
+	border-color: #008800;
+}
+/* footer webmaster */
+#foot-wmaster {
+	flex-grow: 1;
+	border-color: #88ff00;
+}
+</style>
+</head>
+<body>
+<div id="win">
+	<div id="o-head">
+		<header class="top">
+			<div id="page-banner">
+			</div>
+			<nav class="banner">
+				<div class="menubutton">Alpha</div>
+				<div class="menubutton">Beta</div>
+				<div class="menubutton">Gamma</div>
+				<div class="menubutton">Delta</div>
+			</nav>
+		</header>
+	</div>
+	<div id="o-main">
+		<main class="top">
+		</main>
+	</div>
+	<div id="o-foot">
+		<footer class="top">
+			<div id="foot-social">
+			</div>
+			<div id="foot-ref">
+			</div>
+			<div id="foot-wmaster">
+			</div>
+		</footer>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+Contact::Country.destroy_all

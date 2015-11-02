@@ -1,0 +1,20 @@
+.sassy {
+  prop1: blue;
+  prop2: 5px;
+  prop3: 7; }
+  .sassy .items {
+    color-hue: 240;
+    color-saturation: 100;
+    color-value: 100; }
+    .sassy .items #item-1 {
+      order: 1; }
+    .sassy .items #item-2 {
+      order: 2; }
+    .sassy .items #item-3 {
+      order: 3; }
+    .sassy .items #item-4 {
+      order: 4; }
+    .sassy .items #item-5 {
+      order: 5; }
+
+/*# sourceMappingURL=sass_test.css.map */
