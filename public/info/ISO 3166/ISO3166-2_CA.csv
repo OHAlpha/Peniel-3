@@ -1,0 +1,13 @@
+setSubdivision,'CA-AB',' Alberta','Alberta',province
+setSubdivision,'CA-BC',' British Columbia','Colombie-Britannique',province
+setSubdivision,'CA-MB',' Manitoba','Manitoba',province
+setSubdivision,'CA-NB',' New Brunswick','Nouveau-Brunswick',province
+setSubdivision,'CA-NL',' Newfoundland and Labrador','Terre-Neuve-et-Labrador',province
+setSubdivision,'CA-NS',' Nova Scotia','Nouvelle-Écosse',province
+setSubdivision,'CA-ON',' Ontario','Ontario',province
+setSubdivision,'CA-PE',' Prince Edward Island','Île-du-Prince-Édouard',province
+setSubdivision,'CA-QC',' Quebec','Québec',province
+setSubdivision,'CA-SK',' Saskatchewan','Saskatchewan',province
+setSubdivision,'CA-NT',' Northwest Territories','Territoires du Nord-Ouest',territory
+setSubdivision,'CA-NU',' Nunavut','Nunavut',territory
+setSubdivision,'CA-YT',' Yukon','Yukon',territory
