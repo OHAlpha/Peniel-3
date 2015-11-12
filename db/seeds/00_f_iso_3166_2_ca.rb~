@@ -4,7 +4,7 @@
 @ca = Contact::Country.where( alpha_2: 'CA').first
 
 def setSubdivision (ccod,cnom,cfnom,ctyp)
-  Contact::CountrySubdivision.create name: cnom, code: ccod, country: @ca, subdivision_type_id: ctyp.id
+  Contact::CountrySubdivision.create name: cnom, code: ccod, country: @ca, country_subdivision_type: ctyp
 end
 
 setSubdivision 'AB','Alberta','Alberta',@province

@@ -1,3 +1,5 @@
 Contact::CountrySubdivisionType.create name: 'district'
-Contact::CountrySubdivisionType.create name: 'outlying district'
+Contact::CountrySubdivisionType.create name: 'outlying territory'
+Contact::CountrySubdivisionType.create name: 'province'
 Contact::CountrySubdivisionType.create name: 'state'
+Contact::CountrySubdivisionType.create name: 'territory'

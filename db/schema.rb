@@ -81,9 +81,9 @@ ActiveRecord::Schema.define(version: 20151028155547) do
     t.string   "name"
     t.integer  "country_id"
     t.string   "code"
-    t.integer  "contact_country_subdivision_type_id"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.integer  "subdivision_type_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   add_index "contact_country_subdivisions", ["code"], name: "index_contact_country_subdivisions_on_code"
